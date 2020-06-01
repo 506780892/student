@@ -1,0 +1,584 @@
+﻿<!DOCTYPE html>
+<html class="pc" style="font-size: 200px; background: rgb(0, 0, 0);">
+<head>
+    <title>神龍毁灭</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <style>.coverflow .swiper-slide {
+        padding: 0px 0px 1rem;
+        width: 40% !important;
+    }
+
+    .img-dl-tips {
+        display: none;
+        width: 100%;
+    }
+    </style>
+    <script></script>
+    <style data-savepage-href="../static/scc/index.css">[postype=pos-turnning] {
+        position: absolute !important;
+        z-index: 10
+    }
+
+    .rotate-wr {
+        position: relative;
+        overflow: hidden
+    }
+
+    .click-rotate {
+        -webkit-transition: all 1.3s
+    }
+
+    .bg-rotate-img {
+        -webkit-transition: all 1.8s;
+        transition: all 1.8s
+    }
+
+    [postype] {
+        width: 100%
+    }
+
+    a, body, div, html, p {
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(200, 200, 200, 0)
+    }
+
+    *, :after, :before {
+        box-sizing: border-box
+    }
+
+    #wrapper {
+        font-size: 0
+    }
+
+    .component-body {
+        font-size: 0;
+        padding-top: 1px;
+        margin-top: -1px !important
+    }
+
+    a {
+        text-decoration: none;
+        color: #3c3c3c;
+        font-size: .14rem;
+        line-height: 0
+    }
+
+    a, img {
+        display: block
+    }
+
+    img {
+        pointer-events: none
+    }
+
+    .componet-body {
+        position: static
+    }
+
+    .hide {
+        display: none !important
+    }
+
+    .video-control {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        {#background: /*savepage-url=../../static/img/start.4b4773f1afed1aa12dbcd53dcec12650.png*/ url("../static/images/start.png") no-repeat 50% rgba(0, 0, 0, .8);#}
+        background-size: .8rem
+    }
+
+    .pos-t {
+        top: 0 !important
+    }
+
+    .pos-b, .pos-t {
+        position: fixed;
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        z-index: 2
+    }
+
+    .pos-b {
+        bottom: 0 !important;
+        top: auto !important
+    }
+
+    .pos-absolute {
+        position: absolute;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1
+    }
+
+    .ql-size-small {
+        font-size: .75rem
+    }
+
+    .ql-size-large {
+        font-size: 1.5rem
+    }
+
+    .ql-size-huge {
+        font-size: 2.5rem
+    }
+
+    .pc .pos-absolute, .pc .pos-b, .pc .pos-t {
+        max-width: 750px
+    }
+
+    .pc .component-body {
+        max-width: 750px;
+        font-size: 0
+    }
+
+    .ban-div {
+        min-height: .65rem
+    }
+
+    .ban-text {
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+
+    .ban-text p {
+        margin: 0;
+        padding: 0
+    }
+
+    .ban-icon {
+        width: .69rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: .05rem !important
+    }
+
+    .tips p {
+        margin: 0
+    }
+
+    .close-gift {
+        background: none;
+        border: none;
+        font-size: 22px;
+        position: absolute;
+        right: .1rem;
+        top: .1rem;
+        color: #fff;
+        outline: none
+    }
+
+    .box-btn {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-style: solid
+    }
+
+    .coverflow .swiper-slide {
+        width: 60% !important;
+        padding: .05rem 0
+    }
+
+    .coverflow .swiper-slide img {
+        border-radius: .1rem
+    }
+
+    .video-mask {
+        position: relative
+    }
+
+    #wrapper .component-body .treasure-wrap {
+        display: none;
+        max-width: 3.75rem;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: fixed !important;
+        top: 50% !important;
+        -webkit-transform: translateY(-50%) !important;
+        -ms-transform: translateY(-50%) !important;
+        transform: translateY(-50%) !important;
+        z-index: 999 !important
+    }
+
+    #wrapper .component-body .treasure-wrap.hover {
+        display: block
+    }
+
+    .gift-num {
+        border: none;
+        margin: 0;
+        padding: 0;
+        outline: none
+    }
+
+    .btn-copy, .gift-num {
+        background: none;
+        position: absolute
+    }
+
+    .btn-copy {
+        display: block
+    }
+
+    .tooltips-copy {
+        position: fixed;
+        z-index: 9999;
+        font-size: .14rem;
+        background: #fff;
+        padding: .1rem .3rem;
+        border-radius: 5px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+    .treasureBox {
+        position: static;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        position: relative
+    }
+
+    .close-gift {
+        background: none;
+        border: none;
+        font-size: 22px;
+        position: absolute;
+        right: .1rem;
+        top: .1rem;
+        color: #fff;
+        outline: none
+    }
+
+    #wrapper .component-body .treasure-wrap {
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3)
+    }
+
+    .treasureBox {
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%)
+    }
+
+    .component-body {
+        background: #fff;
+        overflow: visible;
+        margin: auto;
+        position: relative
+    }
+
+    .component-body img, .component-body video {
+        width: 100%
+    }</style>
+    <script id="jsonp_invoker_1" type="text/javascript"
+            data-savepage-src=""></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="../static/js/index1.js" data-savepage-src="../static/js/index1.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="../static/js/index" data-savepage-src="..static/js/index.js"></script>
+    <style data-savepage-href="../static/css/index.css">.phone-body .full {
+        position: absolute;
+    }
+
+    .full {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .full-video .page {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .full-video .control {
+        {#background-image: /*savepage-url=./img/start.png*/ var(--savepage-url-5);#}
+        background-size: .8rem
+    }
+
+    .full-video .mask {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: rgb(0, 0, 0);
+        opacity: .6;
+    }
+
+    .full .tips {
+        position: absolute;
+        z-index: 1;
+        font-size: 0.14rem;
+        line-height: .28rem;
+        color: #fff;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: .25rem;
+        padding-left: .25rem;
+        padding-right: 25%;
+        padding-top: .1rem;
+        background: rgba(0, 0, 0, .3)
+    }
+
+    .full .dl {
+        position: absolute;
+        left: .25rem;
+        bottom: .25rem;
+        z-index: 1;
+        font-size: 0.14rem;
+        right: 1.5rem;
+        line-height: .28rem;
+        width: 75%;
+        color: #fff;
+        padding: .1rem;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+        color: #3c3c3c;
+    }
+
+    .full .btn {
+        border: none;
+        margin-top: .1rem;
+        background-color: #DB9745;
+        color: #fff;
+        font-size: 0.16rem;
+        border-radius: 5px;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .full .dl-info {
+        position: relative;
+        padding-left: .9rem;
+        height: .8rem;
+    }
+
+    .full .dl-icon {
+        width: .8rem;
+        height: .8rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .full .title {
+
+        font-size: 1.2em;
+    }
+
+    .full .desc {
+        height: 0.5rem;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 0.24rem;
+    }
+
+    .full .dl-close {
+        position: absolute;
+        right: .1rem;
+        top: 0rem;
+        font-size: 0.16rem;
+    }
+
+
+    .video-end-box {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: -1rem;
+    }
+
+    .video-end-box .btn {
+        display: inline-block;
+        border: none;
+        margin-right: .2rem;
+        border-radius: 10px;
+        width: 1rem;
+        height: .3rem;
+        line-height: .3rem;
+        font-size: .14rem;
+        color: #fff;
+    }
+
+    .video-end-box .btn-play {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .video-end-box .btn-dl {
+
+        background-color: #DB9745;
+        margin-left: .2rem;
+    }
+
+    .video-end-box .icon {
+        width: .8rem;
+        margin: auto;
+    }
+
+    .video-end-box .name {
+        font-size: .16rem;
+        color: #fff;
+        margin-bottom: 0.1rem;
+        line-height: .24rem;
+    }
+
+    .video-end-box .btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 1px #666;
+    }</style>
+    <link rel="icon" href="">
+    <style id="savepage-cssvariables">
+        :root {
+            --savepage-url-4: url();
+            --savepage-url-5: url(data:image/png;base64,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);
+        }
+    </style>
+    <script id="savepage-shadowloader" type="application/javascript">
+        "use strict"
+        window.addEventListener("DOMContentLoaded",
+            function (event) {
+                savepage_ShadowLoader(5);
+            }, false);
+
+        function savepage_ShadowLoader(c) {
+            createShadowDOMs(0, document.documentElement);
+
+            function createShadowDOMs(a, b) {
+                var i;
+                if (b.localName == "iframe" || b.localName == "frame") {
+                    if (a < c) {
+                        try {
+                            if (b.contentDocument.documentElement != null) {
+                                createShadowDOMs(a + 1, b.contentDocument.documentElement)
+                            }
+                        } catch (e) {
+                        }
+                    }
+                } else {
+                    if (b.children.length >= 1 && b.children[0].localName == "template" && b.children[0].hasAttribute("data-savepage-shadowroot")) {
+                        b.attachShadow({mode: "open"}).appendChild(b.children[0].content);
+                        b.removeChild(b.children[0]);
+                        for (i = 0; i < b.shadowRoot.children.length; i++) if (b.shadowRoot.children[i] != null) createShadowDOMs(a, b.shadowRoot.children[i])
+                    }
+                    for (i = 0; i < b.children.length; i++) if (b.children[i] != null) createShadowDOMs(a, b.children[i])
+                }
+            }
+        }
+    </script>
+    <meta name="savepage-url" content="">
+    <meta name="savepage-title" content="神龍毁灭">
+    <meta name="savepage-from" content="">
+    <meta name="savepage-date" content="Fri May 29 2020 16:10:37 GMT+0800 (中国标准时间)">
+    <meta name="savepage-state"
+          content="Standard Items; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+    <meta name="savepage-version" content="17.3">
+    <meta name="savepage-comments" content="">
+</head>
+<body>
+<div id="app">
+    <div id="wrapper" style="opacity: 1;">
+        <div class="component-body">
+            <div class="componet-body pos-normal" id="" style="margin: 0rem; top: 0rem; z-index: 1;"><a target="_self"
+                                                                                                        href="https://apps.apple.com/cn/app/id1483315234">
+                <div class="full full-video">
+                    <video width=1200 height=650 controls autoplay
+                        preload="true" source src="../static/v-3055.mp4" type="video/mp4">
+
+                    </video>
+
+{#                    <div class="video-mask page"#}
+{#                         style="background-image: url('../static/images/p-3054.jpg'); z-index: 1;">#}
+{#                        <div class="mask"></div>#}
+{#                    </div>#}
+                    <div class="control page" style="z-index: 2;"></div>
+                    <div class="video-end page hide" style="z-index: 3;">
+                        <div class="video-end-box"><img data-savepage-src="../static/images/p-2689.png" src=""
+                                                        class="icon">
+                            <div class="name">神龍毁灭</div>
+                            <span class="btn btn-play">重播</span><span class="btn btn-dl">立即下载</span></div>
+                    </div>
+                    <div class="tips" style="z-index: 4;"><p class="title">@神龍毁灭</p>
+                        <p class="desc">上线就送VIP，尊享礼包码vip2020！</p><span class="btn">点我玩玩</span></div>
+                    <div class="dl" style="z-index: 5;">
+                        <div class="dl-info">
+                            <img data-savepage-src="../static/images/p-2689.png"
+                                 src="../static/images/p-2689.png"
+                                 class="dl-icon"><span class="dl-close">X</span>
+                            <p class="title">神龍毁灭</p>
+                            <p class="desc">上线就送VIP，尊享礼包码vip2020！</p></div>
+
+                        <span class="btn">点我玩玩
+                            </span></div>
+
+                </div>
+            </a></div>
+        </div>
+    </div>
+    <img data-savepage-src="../static/images/bg_wx_tips.jpg"
+         src=""
+         class="img-dl-tips">
+</div>
+
+<script data-savepage-src=""></script>
+<script></script>
+<script data-savepage-src="/js/module/h5/zepto.min.js"></script>
+<script data-savepage-src="../static/js/require.js" data-main="../static/js/index1.js"></script>
+<script type="text/javascript" charset="utf-8" data-savepage-src="../static/api/c.php"></script>
+
+<!--统计代码 start-->
+<script type="text/javascript" data-savepage-src="/js/g_sy.js"></script>
+<script></script>
+<!--统计处理-->
+<script type="text/javascript"></script>
+<!--统计处理-->
+<!-- 统计热点埋点 -->
+<script type="text/javascript" data-savepage-src="../static/js/hot.js"></script>
+<!-- 统计热点埋点 -->
+<!--统计代码 end-->
+
+</body>
+</html>
